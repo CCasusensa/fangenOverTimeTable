@@ -6,22 +6,6 @@
     margin-bottom: 20px;
   }
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-  }
-
-  th,
-  td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
-  th {
-    background-color: #f2f2f2;
-  }
-
   .holiday-row {
     background-color: rgb(255, 105, 105);
   }
@@ -49,16 +33,17 @@
 
   .centered-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     text-align: center;
+    width: 100%;
+    padding: 2px;
   }
 
   .name-inputs {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .name-inputs label {
@@ -67,6 +52,21 @@
 
   .name-inputs input {
     margin-right: 10px;
+    flex: 1 1 100px;
+    min-width: 100px;
+    max-width: 200px;
+  }
+
+  @media (max-width: 768px) {
+    .name-inputs {
+      flex-direction: column;
+      text-align: left;
+      margin-right: 15px;
+    }
+    .name-inputs input {
+      flex: 1 1 1px;
+      max-width: 200px;
+    }
   }
 
   .select-container {
@@ -74,4 +74,24 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+
+  .table-container {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    border: 2px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f2f2f2;
   }
