@@ -1,4 +1,4 @@
-  main {
+main {
     text-align: center;
   }
 
@@ -12,6 +12,10 @@
 
   .dayOfDay-row {
     background-color: rgb(255, 255, 121);
+  }
+
+  .national-holiday-row {
+    background-color: rgb(200, 162, 255);
   }
 
   button {
